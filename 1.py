@@ -35,3 +35,21 @@ def inputCheck(check):
         x_check, y_check = incheck.split(sep=",")
         if Board[int(x_check) - 1][int(y_check) - 1] == '-':
             Board[int(x_check) - 1][int(y_check) - 1] = check
+            if check == "#":
+                wide1.append(int(x_check))
+                high1.append(int(y_check))
+                if len(wide1) >= 5:
+                    for i in range(len(wide1)):
+                        if (wide1[i] + int(y_check)) / (high1[i] + int(x_check)) == 1:
+                            num1.append(wide1[i])
+                            win(num1, "#")
+                        if wide1[i] == int(x_check):
+                            num11.append(high1[i])
+                            win(num11, "#")
+                        if high1[i] == int(y_check):
+                            num12.append(wide1[i])
+                            win(num12, "#")
+                    num1.clear()
+                    num11.clear()
+                    num12.clear()
+                return True
