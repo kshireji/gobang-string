@@ -53,3 +53,22 @@ def inputCheck(check):
                     num11.clear()
                     num12.clear()
                 return True
+
+            if check == "*":
+                wide2.append(int(x_check))
+                high2.append(int(y_check))
+                if len(wide2) >= 5:
+                    for i in range(len(wide1)):
+                        if (wide2[i] + int(y_check)) / (high2[i] + int(x_check)) == 1:
+                            num2.append(wide1[i])
+                            win(num2, "*")
+                        if wide2[i] == int(x_check):
+                            num21.append(high2[i])
+                            win(num21, "*")
+                        if high2[i] == int(y_check):
+                            num22.append(wide2[i])
+                            win(num22, "*")
+                    num2.clear()
+                    num21.clear()
+                    num22.clear()
+                return True
