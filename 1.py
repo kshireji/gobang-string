@@ -113,3 +113,23 @@ def ai_inputCheck(check,x,y):
                     num21.clear()
                     num22.clear()
                 return True
+
+# 判断五位数字是否相连
+def win(num, check):
+    num.sort()
+    n = 0
+    j = 0
+    n = num[0]
+    for i in num:
+        if i == n:
+            n = i + 1
+            j = j + 1
+            if j >= 5:
+                printboard()
+                print(check,end="")
+                print("胜利，结束")
+                sys.exit()
+        else:
+            n = i
+            n = n + 1
+            j = 1
