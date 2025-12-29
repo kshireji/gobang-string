@@ -72,3 +72,44 @@ def inputCheck(check):
                     num21.clear()
                     num22.clear()
                 return True
+
+
+def ai_inputCheck(check,x,y):
+        if Board[int(x) - 1][int() - 1] == '-':
+            Board[int(x) - 1][int(y) - 1] = check
+            if check == "#":
+                wide1.append(int(x))
+                high1.append(int(y))
+                if len(wide1) >= 5:
+                    for i in range(len(wide1)):
+                        if (wide1[i] + int(y)) / (high1[i] + int(x)) == 1:
+                            num1.append(wide1[i])
+                            win(num1, "#")
+                        if wide1[i] == int(x):
+                            num11.append(high1[i])
+                            win(num11, "#")
+                        if high1[i] == int(y):
+                            num12.append(wide1[i])
+                            win(num12, "#")
+                    num1.clear()
+                    num11.clear()
+                    num12.clear()
+                return True
+            if check == "*":
+                wide2.append(int(x))
+                high2.append(int(y))
+                if len(wide2) >= 5:
+                    for i in range(len(wide1)):
+                        if (wide2[i] + int(y)) / (high2[i] + int(x)) == 1:
+                            num2.append(wide1[i])
+                            win(num2, "*")
+                        if wide2[i] == int(x):
+                            num21.append(high2[i])
+                            win(num21, "*")
+                        if high2[i] == int(y):
+                            num22.append(wide2[i])
+                            win(num22, "*")
+                    num2.clear()
+                    num21.clear()
+                    num22.clear()
+                return True
