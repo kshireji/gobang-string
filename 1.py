@@ -133,3 +133,14 @@ def win(num, check):
             n = i
             n = n + 1
             j = 1
+
+def socks(num,check):
+    num.sort()
+    n = 0
+    j = 0
+    n = num[0]
+    for i in num:
+        if i == n:
+            n = i + 1
+            j = j + 1
+    return j
