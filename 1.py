@@ -144,3 +144,20 @@ def socks(num,check):
             n = i + 1
             j = j + 1
     return j
+
+def aiD(x,y):
+    num=0
+    x1=x+1
+    x2=x+2
+    x3=x+3
+    x4=x+4
+    if (x1<15 and x2<15 and x3<15 and x4<15 and y>=0 and x>=0):
+        if (Board[x1][y]=="#"):
+            num+=1
+        if (Board[x2][y]=="#"):
+            num+1
+        if (Board[x3][y]=="#"):
+            num+1
+        if (Board[x4][y]=="#"):
+            num+1
+    return num
