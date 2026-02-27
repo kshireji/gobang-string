@@ -161,3 +161,20 @@ def aiD(x,y):
         if (Board[x4][y]=="#"):
             num+1
     return num
+
+def aiA(x,y):
+    num=0
+    x1=x-1
+    x2=x-2
+    x3=x-3
+    x4=x-4
+    if (x1>0 and x2>0 and x3>0 and x4>0 and y>=0 and x>=0):
+        if (Board[x1][y]=="#"):
+            num+=1
+        if (Board[x2][y]=="#"):
+            num+1
+        if (Board[x3][y]=="#"):
+            num+1
+        if (Board[x4][y]=="#"):
+            num+1
+    return num
