@@ -178,3 +178,20 @@ def aiA(x,y):
         if (Board[x4][y]=="#"):
             num+1
     return num
+
+def aiW(x,y):
+    num=0
+    y1=y-1
+    y2=y-2
+    y3=y-3
+    y4=y-4
+    if (y1>0 and y2>0 and y3>0 and y4>0  and y>=0 and x>=0):
+        if (Board[x][y1]=="#"):
+            num+=1
+        if (Board[x][y2]=="#"):
+            num+1
+        if (Board[x][y3]=="#"):
+            num+1
+        if (Board[x][y4]=="#"):
+            num+1
+    return num
