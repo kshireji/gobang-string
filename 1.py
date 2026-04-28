@@ -195,3 +195,20 @@ def aiW(x,y):
         if (Board[x][y4]=="#"):
             num+1
     return num
+
+def aiS(x,y):
+    num=0
+    y1=y+1
+    y2=y+2
+    y3=y+3
+    y4=y+4
+    if (y1<15 and y2<15 and y3<15 and y4<15  and y>=0 and x>=0):
+        if (Board[x][y1]=="#"):
+            num+=1
+        if (Board[x][y2]=="#"):
+            num+1
+        if (Board[x][y3]=="#"):
+            num+1
+        if (Board[x][y4]=="#"):
+            num+1
+    return num
