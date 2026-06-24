@@ -212,3 +212,32 @@ def aiS(x,y):
         if (Board[x][y4]=="#"):
             num+1
     return num
+
+def aiQ(x,y):
+    num=0
+    y1=y-1
+    y2=y-2
+    y3=y+1
+    y4=y+2
+    x1=x-1
+    x2=x-2
+    x3=x+1
+    x4=x+2
+    if (y1>0 and y2>0 and y3<15 and y4<15 and x1>0 and x2>0 and x3<15 and x4<15):
+        if (Board[x1][y1]=="#"):
+            num+=1
+        if (Board[x2][y2]=="#"):
+            num+1
+        if (Board[x3][y3]=="#"):
+            num+1
+        if (Board[x4][y4]=="#"):
+            num+1
+        if (Board[x3][y1]=="#"):
+            num+=1
+        if (Board[x4][y2]=="#"):
+            num+1
+        if (Board[x1][y3]=="#"):
+            num+1
+        if (Board[x2][y4]=="#"):
+            num+1
+    return num
