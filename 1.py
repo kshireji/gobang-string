@@ -241,3 +241,41 @@ def aiQ(x,y):
         if (Board[x2][y4]=="#"):
             num+1
     return num
+
+def ai_drop():
+    ai_x=0
+    ai_y=0
+    num1=0
+    for i in range(len(Board)-1):
+        for j in range(len(Board[i])-1):
+            if Board[i][j] == '-':
+                w=aiW(i,j)
+                a = aiA(i, j)
+                s = aiS(i, j)
+                d = aiD(i, j)
+                q=aiQ(i,j)
+                if num1<a:
+                    num1=a
+                    ai_x=i
+                    ai_y=j
+                if num1<s:
+                    num1=s
+                    ai_x=i
+                    ai_y=j
+                if num1<w:
+                    num1=w
+                    ai_x=i
+                    ai_y=j
+                if num1<d:
+                    num1=d
+                    ai_x=i
+                    ai_y=j
+                if num1<q:
+                    num1=q
+                    ai_x=i
+                    ai_y=j
+
+    if(num1!=0):
+        ai_inputCheck('*',ai_x+1,ai_y+1)
+    else:
+        ai_random()
