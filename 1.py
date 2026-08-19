@@ -279,3 +279,10 @@ def ai_drop():
         ai_inputCheck('*',ai_x+1,ai_y+1)
     else:
         ai_random()
+def ai_random():
+    while(1):
+            x=random.randint(1,15)
+            y=random.randint(1,15)
+            if(Board[x-1][y-1]=='-'):
+                ai_inputCheck('*',x,y)
+                break
