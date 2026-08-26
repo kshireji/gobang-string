@@ -286,3 +286,28 @@ def ai_random():
             if(Board[x-1][y-1]=='-'):
                 ai_inputCheck('*',x,y)
                 break
+def match():
+    initboard()
+    print()
+    print("-------五子棋-------------")
+    printboard()
+    print("#为玩家，*为电脑")
+    check = "#"
+    while 1:
+        if check == "#":
+            same = inputCheck("#")
+            printboard()
+            check = "*"
+
+        # elif check == "*":
+        #     same = inputCheck("*")
+        #     printboard()
+        #     check = "#"
+        else:
+            ai_drop()
+            printboard()
+            check = "#"
+
+    print()
+    print("end")
+match()
